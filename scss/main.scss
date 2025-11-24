@@ -1,0 +1,15 @@
+@import 'base/reset';
+@import 'base/fonts';
+@import 'base/global';
+@import 'base/variables';
+
+@import 'layout/grid';
+@import 'layout/footer';
+
+@import 'components/button';
+@import 'components/header';
+
+// Дальнейшие страницы:
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
