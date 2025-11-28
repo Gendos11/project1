@@ -1,5 +1,15 @@
-$container-width: 1170px;
-$container-padding: 15px;
+// Colors
+$color-primary: #323264;
+$color-accent: #F0145A;
+$color-grey: #B3B3BA;
+$color-light: #ffffff;
+$color-dark: #1D1D1F;
 
-$color-dark: #1D1D1D;
-~
+// Backgrounds
+$bg-light: #ffffff;
+$bg-dark: #323264;
+
+// Breakpoints
+$bp-desktop: 1200px;
+$bp-tablet: 768px;
+$bp-mobile: 480px;

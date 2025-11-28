@@ -1,36 +1,224 @@
+
+
+<!-- Главная страница -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header class="header">
-  <div class="header__container">
 
-    <a href="#" class="header__logo">
-      <img src="./assets/img/logo.svg" alt="HLegal Logo">
-    </a>
+  <!-- HEADER -->
+  <header class="header header--dark">
+    <div class="container header__wrapper">
+      <a href="index.html" class="header__logo"><img src="assets/icons/logo.svg" alt="logo"></a>
+      <nav class="header__nav">
+        <a href="about.html">about us</a>
+        <a href="services.html">services</a>
+        <a href="#">team</a>
+        <a href="#">publications</a>
+        <a href="contact.html">contact</a>
+      </nav>
+      <div class="header__info">
+        <span class="header__lang">EN</span>
+        <span class="header__phone">0800 351 937</span>
+        <button class="header__burger"><img src="assets/icons/burger.svg" /></button>
+      </div>
+    </div>
+  </header>
 
-    <nav class="header__nav">
-      <ul class="header__list">
-        <li><a href="#" class="header__link">about us</a></li>
-        <li><a href="#" class="header__link">services</a></li>
-        <li><a href="#" class="header__link">cases</a></li>
-        <li><a href="#" class="header__link">team</a></li>
-        <li><a href="#" class="header__link">publications</a></li>
-        <li><a href="#" class="header__link">contact</a></li>
-      </ul>
-    </nav>
+  <!-- HERO -->
+  <section class="hero">
+  <img src="assets/icons/symbol_logo.svg" alt="" class="hero__symbol">
 
-    <!-- BURGER -->
-    <button class="header__burger" id="burgerBtn">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="container hero__content">
+    <h1 class="hero__title">you legal solutions provider</h1>
+
+    <div class="hero__tags">
+      <span>Consistent</span>
+      <span>Customer oriented</span>
+      <span>Innovative</span>
+      <span>Business oriented</span>
+    </div>
+
+    <h2 class="hero__subtitle">We turn the idea of legal services</h2>
+
+    <p class="hero__text">
+      Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve
+      the adoption of a number of decisions that are important for the industry.
+    </p>
+  </div>
+</section>
+
+
+  <!-- SERVICES CARDS BLOCK -->
+  <section class="services">
+    <div class="container">
+      <h2 class="services__title">What we do best</h2>
+
+      <div class="services__grid">
+        <div class="service-card">
+          <img src="assets/icons/ecommerce.svg" class="service-card__icon" />
+          <h3 class="service-card__title">IT & e-commerce</h3>
+          <p class="service-card__text">An endless stream of contracts, tax issues,
+             labor relations, corporate papers - legal work distracts you from doing
+              business. But there is not much work to do to hire an in-house lawyer.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/icons/support.svg" class="service-card__icon" />
+          <h3 class="service-card__title">Corporate consulting</h3>
+          <p class="service-card__text">In addition, over time, the work will become 
+            the same type and uninteresting for a full-time lawyer. And we know very 
+            well how difficult it is to find a good candidate with experience in the 
+            field of information technology in Ukraine.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/icons/coprorate.svg" class="service-card__icon" />
+          <h3 class="service-card__title">Structuring corporate relationships</h3>
+          <p class="service-card__text">Instead of just providing legal services, we 
+            will hire a lawyer or a whole team that will fit into the daily life of your
+             company.</p>
+        </div>
+
+        <div class="service-card">
+          <img src="assets/icons/trust.svg" class="service-card__icon" alt="">
+          <h3 class="service-card__title">Building contractual relations</h3>
+          <p class="service-card__text">
+           Once a week, or week after month, you have your own lawyer by your side. Anyone
+            in the company can catch it at the coffee maker and just talk about current 
+            affairs instead of waiting for update status.
+          </p>
+        </div>
+
+         <div class="service-card">
+            <img src="assets/icons/protection.svg" class="service-card__icon" alt="">
+            <h3 class="service-card__title">Protection of business, privacy and reputation</h3>
+            <p class="service-card__text">
+             And all the other time he will work on new diverse projects, so he will definitely 
+             not stop in professional development. One way or another, all Axon Partners will work 
+             for you instead of a corporate lawyer.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <img src="assets/icons/court.svg" class="service-card__icon" alt="">
+            <h3 class="service-card__title">Judicial representation</h3>
+            <p class="service-card__text">
+             Is it a small, medium-sized company or a market leader? Local business or 
+             multinational company? Do you have your own legal department or not?
+            </p>
+         </div>
+
+      </div>
+    </div>
+  </section>
+
+
+ <!-- Teems coments -->
+<section class="team-slider">
+  <div class="container">
+
+    <div class="team-slider__wrapper">
+
+      <button class="team-slider__arrow team-slider__arrow--prev">‹</button>
+      <button class="team-slider__arrow team-slider__arrow--next">›</button>
+
+      <div class="team-slider__track">
+
+        <!-- SLIDE 1 -->
+        <div class="team-slide">
+          <img src="assets/images/team1.jpg" class="team-slide__photo" alt="">
+          <div class="team-slide__content">
+            <span class="team-slide__tag">команда</span>
+            <h3 class="team-slide__title">
+              Ми звикли брати на себе відповідальність...
+            </h3>
+            <p class="team-slide__name">Олександр Олександровський</p>
+            <p class="team-slide__role">Керуючий партнер</p>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 -->
+        <div class="team-slide">
+          <img src="assets/images/team2.jpg" class="team-slide__photo" alt="">
+          <div class="team-slide__content">
+            <span class="team-slide__tag">команда</span>
+            <h3 class="team-slide__title">
+              Кожен кейс — унікальний, і ми розуміємо клієнтів з півслова.
+            </h3>
+            <p class="team-slide__name">Ірина Мельник</p>
+            <p class="team-slide__role">Корпоративне право</p>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 -->
+        <div class="team-slide">
+          <img src="assets/images/team3.jpg" class="team-slide__photo" alt="">
+          <div class="team-slide__content">
+            <span class="team-slide__tag">команда</span>
+            <h3 class="team-slide__title">
+              Наша мета — створити юридичну безпеку бізнесу.
+            </h3>
+            <p class="team-slide__name">Андрій Коваленко</p>
+            <p class="team-slide__role">Фінансове право</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="team-slider__dots">
+        <button class="dot active"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
+      </div>
+
+    </div>
 
   </div>
-</header>
+</section>
+
+
+  <!-- ABOUT SHORT SECTION -->
+  <section class="about-short">
+    <div class="container about-short__wrapper">
+      <h2>About Hlegal</h2>
+      <p>Lorem ipsum text block from Figma… (добавим позже)</p>
+    </div>
+  </section>
+
+  <!-- TEAM BLOCK (simple placeholder) -->
+  <section class="team">
+    <div class="container team__wrapper">
+      <h2>Our team</h2>
+      <div class="team__cards">
+        <div class="team-card"></div>
+        <div class="team-card"></div>
+        <div class="team-card"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <div class="footer__left">
+        <p>Kyiv, Mechnikova str, 14/1</p>
+        <a href="#" class="footer__map-link">on map</a>
+      </div>
+      <div class="footer__center">
+        <a href="#" class="footer__social"><img src="assets/icons/facebook-footer.svg" /></a>
+        <a class="footer__phone">0800 351 937</a>
+        <a class="footer__mail" href="mailto:contact@hlegal.com">contact@hlegal.com</a>
+      </div>
+      <div class="footer__right"><p>© 2025 Hlegal Law Company LLC</p></div>
+    </div>
+  </footer>
+<script src="js/main.js"></script>
 
 </body>
 </html>
