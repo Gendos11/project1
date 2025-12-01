@@ -1,0 +1,12 @@
+@mixin container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin media-lg { @media (max-width: $lg) { @content; } }
+@mixin media-md { @media (max-width: $md) { @content; } }
+@mixin media-tb { @media (max-width: $tb) { @content; } }
+@mixin media-sm { @media (max-width: $sm) { @content; } }
+@mixin media-xs { @media (max-width: $xs) { @content; } }

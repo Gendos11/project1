@@ -1,0 +1,89 @@
+.footer {
+  background: $color-grey-light;
+  padding: 40px 0;
+  margin-top: 80px;
+
+  &__wrapper {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+    @include media-md {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__address {
+    font-size: 16px;
+    font-weight: 700;
+    color: $color-primary;
+  }
+
+  &__map {
+    color: $color-accent-blue;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include media-md {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  &__facebook img {
+    width: 24px;
+    transition: .2s;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+  }
+
+  &__phone,
+  &__mail {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  &__phone {
+    color: $color-primary;
+
+    &:hover { color: $color-accent; }
+  }
+
+  &__mail {
+    color: $color-accent-blue;
+
+    &:hover { color: $color-accent; }
+  }
+
+  &__right {
+    font-size: 14px;
+    color: $color-grey;
+    white-space: nowrap;
+
+    @include media-md {
+      margin-top: 10px;
+    }
+  }
+}

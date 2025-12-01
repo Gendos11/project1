@@ -1,0 +1,12 @@
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/reset';
+@import 'utils/mixins';
+@import 'base/global';
+
+@import 'layout/grid';
+
+@import 'components/header';
+@import 'components/footer';
+
+@import 'pages/home';

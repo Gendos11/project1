@@ -1,0 +1,249 @@
+.header {
+  background: $color-primary;
+  color: $color-white;
+  padding: 40px 0 0;
+  position: relative;
+  z-index: 20;
+
+  &--light {
+    background: $color-white;
+    color: $color-primary;
+  }
+
+  &--light .header__nav a {
+    color: $color-primary;
+  }
+
+  &--light .header__phone {
+    color: $color-grey;
+  }
+
+  &--light .header__nav a.is-active {
+    color: $color-accent;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  &__top-row {
+    @include container;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    font-size: 14px;
+  }
+
+  &__langs {
+    display: flex;
+    gap: 6px;
+
+    .lang {
+      border: none;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 8px;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 12px;
+      color: inherit;
+      cursor: pointer;
+      transition: 0.2s;
+
+      &--active {
+        background: $color-accent;
+      }
+
+      &:hover:not(.lang--active) {
+        background: rgba(255,255,255,0.35);
+      }
+    }
+  }
+
+  &__dot {
+    opacity: .6;
+  }
+
+  &__address {
+    opacity: .8;
+  }
+
+  &__phone {
+    font-weight: 700;
+    color: $color-white;
+    text-decoration: none;
+    transition: .2s;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+
+  &__facebook img {
+    width: 18px;
+    transition: .25s;
+    opacity: .9;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.12);
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+  }
+
+  &__bottom-row {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo img {
+    height: 48px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 24px;
+
+    a {
+      font-size: 16px;
+      font-weight: 700;
+      color: $color-white;
+      text-decoration: none;
+      position: relative;
+      opacity: .85;
+      transition: .2s;
+
+      &:hover {
+        opacity: 1;
+        color: $color-accent;
+      }
+
+      &.is-active {
+        color: $color-accent;
+        opacity: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -6px;
+          width: 100%;
+          height: 3px;
+          border-radius: 2px;
+          background: $color-accent;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    img {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  @include media-tb {
+    &__nav {
+      display: none;
+    }
+
+    &__burger {
+      display: block;
+    }
+  }
+
+  @include media-xs {
+    &__address,
+    &__dot {
+      display: none;
+    }
+
+    &__top-row {
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: $color-white;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: .3s ease;
+  z-index: 200;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+
+  &.is-open {
+    right: 0;
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    font-size: 26px;
+    align-self: flex-end;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: $color-primary;
+  }
+
+  a {
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #E6E6F0;
+    text-decoration: none;
+    font-weight: 700;
+    color: $color-primary;
+    margin-bottom: 10px;
+    transition: .2s;
+
+    &.is-active {
+      color: $color-accent;
+      border-color: $color-accent;
+    }
+
+    &:hover {
+      border-color: $color-accent;
+      color: $color-accent;
+    }
+  }
+}
+
+.mobile-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  z-index: 180;
+
+  &.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
